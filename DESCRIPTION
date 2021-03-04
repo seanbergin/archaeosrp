@@ -1,4 +1,4 @@
- Package: srp
+Package: srp
 Title: SITE RECORD PROCESSOR
 Version: 0.0.0.9000
 Authors@R: person("Sean", "Bergin", email = "sbergin@asu.edu", role = c("aut", "cre"))
