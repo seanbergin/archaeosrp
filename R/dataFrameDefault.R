@@ -1,19 +1,18 @@
 #' Makes an empty dataframe with col names
 #'
 #' This function allows you to create a dataframe with correct column titles but empty rows.
-#' @param 
 #' @keywords dataframe
 #' @export
 #' @examples
 #' dataFrameDefault()
 
 dataFrameDefault <- function(){
-  
+
   df <- data.frame(Site=integer(),
                    Zone.UTM= double(),
-                   E.UTM=double(), 
-                   N.UTM=double(), 
-                   Lat=double(), 
+                   E.UTM=double(),
+                   N.UTM=double(),
+                   Lat=double(),
                    Long=double(),
                    Date=character(),
                    OccupationDensity = character(),
@@ -22,8 +21,8 @@ dataFrameDefault <- function(){
                    Doc.Type = character(),
                    BP = character(),
                    OtherInfo = character(),
-                   stringsAsFactors=FALSE) 
+                   stringsAsFactors=FALSE)
 
-  
+
   return(df)
 }
