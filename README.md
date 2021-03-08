@@ -18,5 +18,7 @@ install_github("seanbergin/srp")
 
 The package can be used in two main ways. There is one procedure which can use all of the procedures in the package to process site reports. Or, all of the procedures used to locate words in the documents and all of the procedures to process individual types of documents are useable as well. A user may also want to use the procedures in this package to add additional document types. 
 
+The main procedure takes a folder location as an input and outputs data recorded from the form as a dataframe. It is called processPDFDirectory(directory to pdfs).
+
 
 
