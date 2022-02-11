@@ -1,5 +1,5 @@
-# SRP
-Site Report Processor
+# ArchaeoSRP
+Archaeological Site Report Processor
 
 The purpose of this package is to read PDFs with archaeological site report information and return the information in the forms as a dataframe. This information may include things like, site size, location information, periods of use, or types of use. 
 
@@ -11,7 +11,7 @@ The forest service has been recording and documenting arhcaeological sites for a
 
 To install this package in R you must have the most recent and updated copy of the devtools package. Then, you can install the package directly from github. Then type the following command into R:
 
-install_github("seanbergin/srp")
+install_github("seanbergin/archaeosrp")
 
 
 # How To Use
