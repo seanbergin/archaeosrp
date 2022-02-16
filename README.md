@@ -9,7 +9,7 @@ The forest service has been recording and documenting arhcaeological sites for a
 
 # How to Install
 
-To install this package in R you must have the most recent and updated copy of the devtools package. Then, you can install the package directly from github. Then type the following command into R:
+To install this package in R you must have the most recent and updated copy of the devtools package. You must also load this package first. Then, you can install the package directly from github. Then type the following command into R:
 
 install_github("seanbergin/archaeosrp")
 
