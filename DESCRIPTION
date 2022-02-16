@@ -1,10 +1,19 @@
-Package: srp
-Title: SITE RECORD PROCESSOR
-Version: 0.0.0.9000
-Authors@R: person("Sean", "Bergin", email = "sbergin@asu.edu", role = c("aut", "cre"))
-Description: This package is intended to aid in the processing of archaeological site records. In the initial stage of this project site records were scanned and saved as pdfs. The purpose of this package is to use OCR on these site records and then identify and save useful information.
+Package: ArchaeoSRP
+Title: Archaeological Site Record Processor
+Version: 0.0.1.0000
+Authors@R: 
+  c(person(given = "Sean",
+           family = "Bergin",
+           role = c("aut", "cre"),
+           email = "sbergin@asu.edu",
+           comment = c(ORCID = "0000-0001-9576-7914")),
+    person(given = "Grant",
+           family = "Snitker",
+           role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0003-3548-2241"))))
+Description: This package is intended to aid in the processing of archaeological site records. In the initial stage of this project site records were scanned and saved as pdfs. The purpose of this package is to use OCR on these site records and then parse, identify and save useful information.
 Depends: R (>= 3.5.2)
-License: What license is it under?
+License: The GNU General Public License v3.0
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.1.1
+RoxygenNote: 7.1.2
