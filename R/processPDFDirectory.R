@@ -66,6 +66,7 @@ processPDFDirectory <- function(pdf_dir){
         if( doctypes [j] == 17){df = srp:::processDocType17(df, stringSplit)}
         if( doctypes [j] == 18){df = srp:::processDocType18(df, stringSplit)}
         if( doctypes [j] == 19){df = srp:::processDocType19(df, stringSplit)}
+        if( doctypes [j] == 20){df = srp:::processDocType20(df, stringSplit)}
       }
     }
 

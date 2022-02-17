@@ -32,9 +32,9 @@ docTypeFinder <- function(fullString){
       value <- append(value,3)
     }
   }
-  
+
   #Since doc types 4 and 5 are so close we can only find one or the other
-  
+
   #check for document 4 & 5
   stringTitle = "SITE INVENTORY FORM"
   presence = grepl(stringTitle,fullString)
@@ -42,7 +42,12 @@ docTypeFinder <- function(fullString){
     stringTitle = "Information for Official Smithsonian Number"
     presence = grepl(stringTitle,fullString)
     if(presence){
-      value <- append(value,5)
+      stringTitle = "different from original"
+      presence = grepl(stringTitle,fullString)
+      if(presence){
+        value <- append(value,5)
+       } else {value <- append(value,20)}
+
     }else{
       stringTitle = "WASHINGTON ARCHAEOLOGICAL SITE INVENTORY FORM"
       presence = grepl(stringTitle,fullString)
@@ -58,10 +63,10 @@ docTypeFinder <- function(fullString){
         }
 
       }
-    
+
     }
   }
-  
+
   #check for document type 6
   stringTitle = "Cultural Resource Isolated Find"
   presence = grepl(stringTitle,fullString)
@@ -83,7 +88,7 @@ docTypeFinder <- function(fullString){
   if(presence){
     value <- append(value,8)
   }
-  
+
   #check for document type 9
   stringTitle = "TICKLER FORM"
   presence = grepl(stringTitle,fullString)
@@ -96,7 +101,7 @@ docTypeFinder <- function(fullString){
   if(presence){
     value <- append(value,9)
   }
-  
+
   #check for document type 11, 10 is listed above
   stringTitle = "USDA Forest Service"
   stringTitle2 = "Pacific Northwest Region"
@@ -105,7 +110,7 @@ docTypeFinder <- function(fullString){
   if(presence && presence2){
     value <- append(value,11)
   }
-  
+
   #check for document type 12
   stringTitle = "Historic Property"
   stringTitle2 = "Historic Name:"
@@ -116,29 +121,29 @@ docTypeFinder <- function(fullString){
   if(presence && presence2 && presence3){
     value <- append(value,12)
   }
-  
+
   #check for document type 13
   stringTitle = "CULTURAL RESOURCE ISOLATED FIND"
   presence = grepl(stringTitle,fullString)
   if(presence){
     value <- append(value,13)
   }
-  
+
   stringTitle = "Historic Inventory Report"
   presence = grepl(stringTitle,fullString)
   if(presence){
     value <- append(value,14)
   }
-  
+
   # 15 is up with type 4
-  
+
   #check for document type 16 - it is handwritten so there's nothing to process
   stringTitle = "FOREST SERVICE - Region Six"
   presence = grepl(stringTitle,fullString)
   if(presence){
     value <- append(value,16)
   }
-  
+
   #check for document type 17 - similar to 15 but is for an islated find
   stringTitle = "YAKIMA RESOURCE MANAGEMENT COOPERATIVE"
   presence = grepl(stringTitle,fullString)
@@ -149,27 +154,27 @@ docTypeFinder <- function(fullString){
       value <- append(value,17)
     }
   }
-  
+
   #check for document type 18
   stringTitle = "Cultural Resource Site Update"
   presence = grepl(stringTitle,fullString)
   if(presence){
     value <- append(value,18)
   }
-  
+
   #check for document type 19 (similar to 5)
    stringTitle = "ARCHAEOLOGICAL SITE UPDATE FORM"
   presence = grepl(stringTitle,fullString)
   if(presence){
-    stringTitle =  "STATE OF WASHINGTON" 
+    stringTitle =  "STATE OF WASHINGTON"
     presence = grepl(stringTitle,fullString)
     if(presence){
     value <- append(value,19)
     }
   }
-  
-  
-  
+
+
+
   return(value)
-  
+
 }
