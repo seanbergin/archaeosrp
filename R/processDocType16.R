@@ -8,7 +8,7 @@
 #' @examples
 #' processDocType16()
 
-processDocType20 <- function(df,stringList){
+processDocType16 <- function(df,stringList){
 
   df$Zone.UTM <- ArchaeoSRP:::phraseFinder(stringList, "zone", "easting")
   df$E.UTM <- ArchaeoSRP:::phraseFinder(stringList, "easting", "northing")
