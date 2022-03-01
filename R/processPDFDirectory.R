@@ -63,10 +63,10 @@ processPDFDirectory <- function(pdf_dir){
         if( doctypes [j] == 13){df = ArchaeoSRP:::processDocType13(df, stringSplit)}
         if( doctypes [j] == 14){df = ArchaeoSRP:::processDocType14(df, stringSplit)}
         if( doctypes [j] == 15){df = ArchaeoSRP:::processDocType15(df, stringSplit)}
-        if( doctypes [j] == 16){df = ArchaeoSRP:::processDocType16(df, stringSplit)}
         if( doctypes [j] == 17){df = ArchaeoSRP:::processDocType17(df, stringSplit)}
         if( doctypes [j] == 18){df = ArchaeoSRP:::processDocType18(df, stringSplit)}
         if( doctypes [j] == 19){df = ArchaeoSRP:::processDocType19(df, stringSplit)}
+        if( doctypes [j] == 20){df = ArchaeoSRP:::processDocType20(df, stringSplit)}
 
       }
     }

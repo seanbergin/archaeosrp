@@ -1,14 +1,14 @@
-#' Find and store important values for document type 16
+#' Find and store important values for document type 20
 #'
-#' This function allows you to sort through document type 16 and save relevant information
+#' This function allows you to sort through document type 20 and save relevant information
 #' @param df  the dataframe for this site which is passed to each document type
 #' @param stringList  all of the page as a string list
-#' @keywords type16
+#' @keywords type20
 #' @export
 #' @examples
-#' processDocType16()
+#' processDocType20()
 
-processDocType16 <- function(df,stringList){
+processDocType20 <- function(df,stringList){
 
   df$Zone.UTM <- ArchaeoSRP:::phraseFinder(stringList, "zone", "easting")
   df$E.UTM <- ArchaeoSRP:::phraseFinder(stringList, "easting", "northing")
