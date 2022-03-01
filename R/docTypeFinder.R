@@ -46,7 +46,7 @@ docTypeFinder <- function(fullString){
       presence = grepl(stringTitle,fullString)
       if(presence){
         value <- append(value,5)
-       } else {value <- append(value,16)}
+       } else {value <- append(value,20)}
 
     }else{
       stringTitle = "WASHINGTON ARCHAEOLOGICAL SITE INVENTORY FORM"
