@@ -44,7 +44,6 @@ docTypeFinder <- function(fullString){
     if(presence){
       stringTitle = "different from original"
       presence = grepl(stringTitle,fullString)
-      cat(presence)
       if(presence){
         value <- append(value,5)
        } else {value <- append(value,20)}
