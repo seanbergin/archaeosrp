@@ -9,36 +9,36 @@
 #' processDocType4()
 
 processDocType4 <- function(df,stringList){
-  
-  df$Zone.UTM <- srp:::phraseFinder(stringList, "zone", "easting:")
-  df$E.UTM <- srp:::phraseFinder(stringList, "easting:", "northing:")
-  df$N.UTM <- srp:::phraseFinder(stringList, "northing:", "latitude:")
-  df$Lat <- srp:::phraseFinder(stringList, "latitude:", "longitude:")
-  df$Long <- srp:::phraseFinder(stringList, "longitude:", "elevation")
-  df$UseInfo <- srp:::phraseFinder(stringList,"type:","dimensions,") 
-  df$OccupationDensity <- srp:::phraseFinder(stringList,"dimensions,","vegetation:") 
-  df$Date <- srp:::phraseFinder(stringList,"*dates:","*dating")
-  
+
+  df$Zone.UTM <- ArchaeoSRP:::phraseFinder(stringList, "zone", "easting:")
+  df$E.UTM <- ArchaeoSRP:::phraseFinder(stringList, "easting:", "northing:")
+  df$N.UTM <- ArchaeoSRP:::phraseFinder(stringList, "northing:", "latitude:")
+  df$Lat <- ArchaeoSRP:::phraseFinder(stringList, "latitude:", "longitude:")
+  df$Long <- ArchaeoSRP:::phraseFinder(stringList, "longitude:", "elevation")
+  df$UseInfo <- ArchaeoSRP:::phraseFinder(stringList,"type:","dimensions,")
+  df$OccupationDensity <- ArchaeoSRP:::phraseFinder(stringList,"dimensions,","vegetation:")
+  df$Date <- ArchaeoSRP:::phraseFinder(stringList,"*dates:","*dating")
+
   if(is.na(df$Zone.UTM)){
-    df$Zone.UTM <- srp:::phraseFinder(stringList, "zone", "easting")
+    df$Zone.UTM <- ArchaeoSRP:::phraseFinder(stringList, "zone", "easting")
   }
   if(is.na(df$E.UTM)){
-    df$E.UTM <- srp:::phraseFinder(stringList, "easting", "northing")
+    df$E.UTM <- ArchaeoSRP:::phraseFinder(stringList, "easting", "northing")
   }
   if(is.na(df$N.UTM)){
-    df$N.UTM <- srp:::wordFinder(stringList, "northing")
+    df$N.UTM <- ArchaeoSRP:::wordFinder(stringList, "northing")
   }
   if(is.na( df$Zone.UTM)){
-    df$Zone.UTM <- srp:::wordFinderB4(stringList,"easting:",1)
+    df$Zone.UTM <- ArchaeoSRP:::wordFinderB4(stringList,"easting:",1)
   }
   if(is.na( df$Zone.UTM)){
-    df$Zone.UTM <- srp:::wordFinderB4(stringList,"easting",1)
+    df$Zone.UTM <- ArchaeoSRP:::wordFinderB4(stringList,"easting",1)
   }
-  
+
   # if (df$UseInfo == NULL || df$Date == NULL || df$OccupationDensity == NULL)
   #   { df$ScanSuccess = FALSE}
   # if (df$Zone.UTM == NULL && df$E.UTM == NULL && df$N.UTM == NULL && df$Lat == NULL && df$Long == NULL)
   # { df$ScanSuccess = FALSE}
-  
+
   return(df)
 }

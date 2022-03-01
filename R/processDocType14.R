@@ -9,17 +9,17 @@
 #' processDocType14()
 
 processDocType14 <- function(df,stringList){
-  
+
   #df$Zone.UTM <- srp:::wordFinder(stringList, "zone")   #This is actually missing from the form
-  df$UseInfo <- srp:::phraseFinder(stringList,"use:","current") 
-  
-  df$E.UTM <- srp:::wordFinder(stringList, "easting:")
-  df$N.UTM <- srp:::wordFinder(stringList, "northing:")
+  df$UseInfo <- ArchaeoSRP:::phraseFinder(stringList,"use:","current")
+
+  df$E.UTM <- ArchaeoSRP:::wordFinder(stringList, "easting:")
+  df$N.UTM <- ArchaeoSRP:::wordFinder(stringList, "northing:")
   # df$Lat <- srp:::wordFinder(stringList, "latitude:")
   # df$Long <- srp:::wordFinder(stringList, "longitude:")
-  df$Date <- srp:::phraseFinder(stringList,"construction:","builder:") 
-  df$OccupationDensity <- wordFinder(stringList, "acreage")
-  
-  
+  df$Date <- ArchaeoSRP:::phraseFinder(stringList,"construction:","builder:")
+  df$OccupationDensity <-  ArchaeoSRP:::wordFinder(stringList, "acreage")
+
+
   return(df)
 }

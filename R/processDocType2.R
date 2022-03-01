@@ -9,13 +9,13 @@
 #' processDocType1()
 
 processDocType2 <- function(df,stringList){
-  
-  df$UseInfo = srp:::phraseFinder(stringList,"instructions)","description")
-  df$Date = srp:::phraseFinder(stringList,"dates","cultural")
-  df$OccupationDensity = srp:::phraseFinder(stringList,"acreage","utm")
+
+  df$UseInfo = ArchaeoSRP:::phraseFinder(stringList,"instructions)","description")
+  df$Date = ArchaeoSRP:::phraseFinder(stringList,"dates","cultural")
+  df$OccupationDensity = ArchaeoSRP:::phraseFinder(stringList,"acreage","utm")
 
   #UTM is a problem
   #scanned: Al1,0) (612:311,5,0) [5,2/4,3]1,7,9| B[1,0} [6{2,3)2,7,0} 5,214 218 2,0
-  
+
   return(df)
 }

@@ -9,22 +9,17 @@
 #' processDocType19()
 
 processDocType19 <- function(df,stringList){
-  
-  df$Zone.UTM <- srp:::phraseFinder(stringList, "zone", "easting:")
-  df$UseInfo <- srp:::phraseFinderAdvanced(stringList,"type:", "dimensions:","narrative") 
-  
-  df$E.UTM <- srp:::wordFinder(stringList, "easting:")
-  df$N.UTM <- srp:::wordFinder(stringList, "northing:")
-  df$Lat <- srp:::wordFinder(stringList, "latitude:")
-  df$Long <- srp:::wordFinder(stringList, "longitude:")
-  df$Date <- srp:::phraseFinderAdvanced(stringList, "component:", "archaeological", "permanence:")
-  df$OccupationDensity <- srp:::phraseFinderAdvanced(stringList,"dimensions:","vegetation:", "description") 
-  
-#  if(is.na( df$E.UTM)){
-#    df$E.UTM <- srp:::phraseFinder(stringList,"eastng","northing")
-#  }
 
-  
-  
+  df$Zone.UTM <- ArchaeoSRP:::phraseFinder(stringList, "zone", "easting:")
+  df$UseInfo <- ArchaeoSRP:::phraseFinderAdvanced(stringList,"type:", "dimensions:","narrative")
+
+  df$E.UTM <- ArchaeoSRP:::wordFinder(stringList, "easting:")
+  df$N.UTM <- ArchaeoSRP:::wordFinder(stringList, "northing:")
+  df$Lat <- ArchaeoSRP:::wordFinder(stringList, "latitude:")
+  df$Long <- ArchaeoSRP:::wordFinder(stringList, "longitude:")
+  df$Date <- ArchaeoSRP:::phraseFinderAdvanced(stringList, "component:", "archaeological", "permanence:")
+  df$OccupationDensity <- ArchaeoSRP:::phraseFinderAdvanced(stringList,"dimensions:","vegetation:", "description")
+
+
   return(df)
 }
