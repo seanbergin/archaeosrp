@@ -10,8 +10,8 @@
 cleanString <- function(string){
   # Lowercase
   temp <- tolower(string)
-  # Remove everything that is not a number or letter (may want to keep more 
-  # stuff in your actual analyses). 
+  # Remove everything that is not a number or letter (may want to keep more
+  # stuff in your actual analyses).
   #temp <- stringr::str_replace_all(temp,"[^a-zA-Z\\s]", " ")
   # Shrink down to just one white space
   temp <- stringr::str_replace_all(temp,"[\\s]+", " ")
@@ -21,6 +21,6 @@ cleanString <- function(string){
   indexes <- which(temp == "")
   if(length(indexes) > 0){
     temp <- temp[-indexes]
-  } 
+  }
   return(temp)
 }

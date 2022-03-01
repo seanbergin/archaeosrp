@@ -18,9 +18,9 @@ processDocType20 <- function(df,stringList){
 
   df$UseInfo <- ArchaeoSRP:::phraseFinder(stringList,"19):","site")
 
-  df$OccupationDensity <- ArchaeoSRP:::phraseFinder(stringList,"Dimensions):","*Method")
+  df$OccupationDensity <- ArchaeoSRP:::phraseFinder(stringList,"dimensions):","*method")
   if(is.na( df$OccupationDensity)){
-    df$OccupationDensity <- ArchaeoSRP:::phraseFinder(stringList,"Dimensions):","Method")
+    df$OccupationDensity <- ArchaeoSRP:::phraseFinder(stringList,"dimensions):","method")
   }
 
   df$OtherInfo<- ArchaeoSRP:::phraseFinder(stringList,"Details):","*Method")
@@ -33,10 +33,13 @@ processDocType20 <- function(df,stringList){
   if(is.na( df$Date)){
     df$Date <- ArchaeoSRP:::wordFinder(stringList, "Component:")
   }
+  if(is.na( df$Date)){
+    df$Date <- ArchaeoSRP:::wordFinderB4(stringList, "approximation):", 5)
+  }
 
-  df$BP <- ArchaeoSRP:::phraseFinder(stringList,"Approximation):","*Dating")
+  df$BP <- ArchaeoSRP:::wordFinderAfter(stringList,"approximation):", 0)
   if(is.na( df$BP)){
-    df$BP <- ArchaeoSRP:::phraseFinder(stringList,"Approximation):","Dating")
+    df$BP <- ArchaeoSRP:::phraseFinder(stringList,"approximation):","dating")
   }
 
   return(df)
