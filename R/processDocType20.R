@@ -42,5 +42,20 @@ processDocType20 <- function(df,stringList){
     df$BP <- ArchaeoSRP:::phraseFinder(stringList,"approximation):","dating")
   }
 
+
+  #Check for  7's being misinterpreted as /
+  df$Zone.UTM = gsub("/", "7", df$Zone.UTM )
+  df$E.UTM  = gsub("/", "7", df$E.UTM )
+  df$N.UTM = gsub("/", "7", df$N.UTM )
+  df$Lat = gsub("/", "7", df$Lat )
+  df$Long = gsub("/", "7", df$Long )
+  df$UseInfo = gsub("/", "7", df$UseInfo )
+  df$OccupationDensity = gsub("/", "7", df$OccupationDensity )
+  df$OtherInfo = gsub("/", "7", df$OtherInfo )
+  df$Date = gsub("/", "7", df$Date )
+  df$BP = gsub("/", "7", df$BP )
+
+
+
   return(df)
 }
