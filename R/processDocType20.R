@@ -16,6 +16,17 @@ processDocType20 <- function(df,stringList){
   df$Lat <- ArchaeoSRP:::phraseFinder(stringList, "latitude:", "longitude:")
   df$Long <- ArchaeoSRP:::phraseFinder(stringList, "longitude:", "elevation")
 
+
+
+  if(is.na( df$Lat)){
+    df$Lat <- ArchaeoSRP:::wordFinderAfter(stringList,"latitude:",0)
+  }
+  if(is.na( df$Long)){
+    df$Long <- ArchaeoSRP:::wordFinderB4(stringList,"elevation",1)
+    df$Long <- gsub(".*\\:", "", df$Long)
+  }
+
+
   df$UseInfo <- ArchaeoSRP:::phraseFinder(stringList,"19):","site")
 
   df$OccupationDensity <- ArchaeoSRP:::phraseFinder(stringList,"dimensions):","*method")
@@ -49,7 +60,7 @@ processDocType20 <- function(df,stringList){
   df$N.UTM = gsub("/", "7", df$N.UTM )
   df$Lat = gsub("/", "7", df$Lat )
   df$Long = gsub("/", "7", df$Long )
-  df$UseInfo = gsub("/", "7", df$UseInfo )
+  #df$UseInfo = gsub("/", "7", df$UseInfo )
   df$OccupationDensity = gsub("/", "7", df$OccupationDensity )
   df$OtherInfo = gsub("/", "7", df$OtherInfo )
   df$Date = gsub("/", "7", df$Date )
