@@ -25,7 +25,7 @@ processPDFDirectory <- function(pdf_dir){
   for(i in 1:list_size[1]){
 
     # Render pdf to png image
-    img_file <- pdftools::pdf_convert(all_files[i], format = 'tiff', pages = NULL, dpi = 900)
+    img_file <- pdftools::pdf_convert(all_files[i], format = 'tiff', pages = NULL, dpi = 800)
     #Use OCR on each page
     fullString = ArchaeoSRP:::ocr2string(img_file)
     #Identify which document types are present
