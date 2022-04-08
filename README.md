@@ -21,4 +21,3 @@ The package can be used in two main ways. The main procedure takes a folder loca
 Or, all of the procedures used to locate words in the documents and all of the procedures to process individual types of documents are useable as well. A user may also want to use the procedures in this package to add additional document types. 
 
 
-hi sean
