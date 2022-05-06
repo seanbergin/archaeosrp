@@ -7,13 +7,14 @@ The package was developed to read archaeological site reports from the Wenatchee
 
 The forest service has been recording and documenting arhcaeological sites for approximately 100 years. During this time the types of forms used to record information about archaeological sites has changed. To adjust for different types of forms, the package first uses specific keywords and phrases such as the titles on documents to identify a form type. Once the form type has been identified specific keywords are then used to locate and save information. There are 19 different form types. 
 
-# How to Install
+# How To Install
 
 To install this package in R you must have the most recent and updated copy of the devtools package. You must also load this package first. Then, you can install the package directly from github. Then type the following command into R:
 
+```shell
 library (devtools)
 install_github("seanbergin/archaeosrp")
-
+```
 
 # How To Use
 
@@ -24,4 +25,15 @@ Or, all of the procedures used to locate words in the documents and all of the p
 *Please Note:*   
 ArchaeoSRP conducts a large amount of image manipulation and therefore requires a substantial amount of computer resources. Attempting to use this package while conducting other tasks on your computer is not recommended.
 
+# How To Try The Package
 
+The package includes three example site records. The sites are not real but the documents contain information in a manner similar to actual documents. Three PDFs are included and can be processed using the following instructions.
+
+1. Assign the example PDF location to a variable.
+```shell
+pdflocation <- system.file("extdata", "SamplePDFs", package = "ArchaeoSRP", mustWork = TRUE)
+```
+2. Use ArchaeSRP to scan the documents and extract information.
+```shell
+siteDF <- ArchaeoSRP::processPDFDirectory(pdflocation)
+```
