@@ -23,7 +23,7 @@ The package can be used in two main ways. The main procedure takes a folder loca
 Or, all of the procedures used to locate words in the documents and all of the procedures to process individual types of documents are useable as well. A user may also want to use the procedures in this package to add additional document types. 
 
 *Please Note:*   
-ArchaeoSRP conducts a large amount of image manipulation and therefore requires a substantial amount of computer resources. Attempting to use this package while conducting other tasks on your computer is not recommended.
+ArchaeoSRP conducts a large amount of image manipulation and therefore requires a substantial amount of computer resources. Attempting to use this package while conducting other tasks on your computer is not recommended. Also, the package can utilize up to 10Gb of hard drive space while it scans the documents.
 
 # How To Try The Package
 
