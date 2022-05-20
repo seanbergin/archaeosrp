@@ -75,6 +75,7 @@ processPDFDirectory <- function(pdf_dir){
     df.all.sites = rbind(df.all.sites,df)
     #Get Rid of the temporary Image files
     file.remove(img_file)
+    gc()
     cat("Document", i, "of", list_size,"Complete", sep=" ")
     cat("\n")
 
