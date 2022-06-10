@@ -137,7 +137,7 @@ docTypeFinder <- function(fullString){
 
   # 15 is up with type 4
 
-  #check for document type 16 - it is handwritten so there's nothing to process
+  #check for document type 16 - This type often includes hand written information which may not scan correctly
   stringTitle = "FOREST SERVICE - Region Six"
   presence = grepl(stringTitle,fullString)
   if(presence){
@@ -174,6 +174,16 @@ docTypeFinder <- function(fullString){
   }
 
 
+  #check for document type 21 (similar to 5) but is for Isolates instead of sites
+  stringTitle = "ARCHAEOLOGICAL ISOLATE INVENTORY FORM"
+  presence = grepl(stringTitle,fullString)
+  if(presence){
+    stringTitle =  "STATE OF WASHINGTON"
+    presence = grepl(stringTitle,fullString)
+    if(presence){
+      value <- append(value,21)
+    }
+  }
 
   return(value)
 
