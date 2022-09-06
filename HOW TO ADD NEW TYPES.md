@@ -28,7 +28,7 @@ if( doctypes [j] == ##){df = ArchaeoSRP:::processDocType##(df, stringSplit)}
 ```
 #Step 3
 
-Finally, one must add the r script that will record information from your new type. For consistency, the script should be named processDocType## and ## should be your new document type. To get a clear picture of this should be formatted,we suggest that you modify an existing document type script. In general the scripts contain a function of the same name as.the script that takes a dataframe and the list of words scanned from your pdf. It should return a dataframe as well. The dataframes are created using dataFrameDefault.R In the processDocType## function, information can then be saved to the dataframe using its existing column names (found in dataFrameDefault). The existing procesDocType scripts provide a number of examples on ways to record information from the scanned text.
+Finally, one must add the r script that will record information from your new type. For consistency, the script should be named processDocType## and ## should be your new document type. To get a clear picture of this should be formatted, we suggest that you modify an existing document type script. In general the scripts contain a function of the same name as.the script that takes a dataframe and the list of words scanned from your pdf. It should return a dataframe as well. The dataframes are created using dataFrameDefault.R In the processDocType## function, information can then be saved to the dataframe using its existing column names (found in dataFrameDefault.R). The existing procesDocType scripts provide a number of examples on ways to record information from the scanned text.
 
 ```shell
 processDocType15 <- function(df,stringList){
