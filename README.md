@@ -7,6 +7,8 @@ The package was developed to read archaeological site reports from the Wenatchee
 
 The forest service has been recording and documenting arhcaeological sites for approximately 100 years. During this time the types of forms used to record information about archaeological sites has changed. To adjust for different types of forms, the package first uses specific keywords and phrases such as the titles on documents to identify a form type. Once the form type has been identified specific keywords are then used to locate and save information. There are 19 different form types. 
 
+<a href="https://zenodo.org/badge/latestdoi/343913660"><img src="https://zenodo.org/badge/343913660.svg" alt="DOI"></a>
+
 # How To Install
 
 To install this package in R you must have the most recent and updated copy of the devtools package. You must also load this package first. Then, you can install the package directly from github. Then type the following command into R:
