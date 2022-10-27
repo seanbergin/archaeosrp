@@ -5,7 +5,7 @@ The purpose of this package is to read PDFs with archaeological site report info
 
 The package was developed to read archaeological site reports from the Wenatchee National Forest. SRP uses the OCR engine from Tesseract to transform the PDFs into text. The text is then searched for keywords to locate information which is then saved to the dataframe. 
 
-The forest service has been recording and documenting arhcaeological sites for approximately 100 years. During this time the types of forms used to record information about archaeological sites has changed. To adjust for different types of forms, the package first uses specific keywords and phrases such as the titles on documents to identify a form type. Once the form type has been identified specific keywords are then used to locate and save information. There are 21 different form types. 
+The USDA Forest Service has been recording and documenting arhcaeological sites for approximately 100 years. During this time the types of forms used to record information about archaeological sites has changed. To adjust for different types of forms, the package first uses specific keywords and phrases such as the titles on documents to identify a form type. Once the form type has been identified specific keywords are then used to locate and save information. There are 21 different form types. 
 
 <a href="https://zenodo.org/badge/latestdoi/343913660"><img src="https://zenodo.org/badge/343913660.svg" alt="DOI"></a>
 
