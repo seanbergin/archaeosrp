@@ -1,6 +1,6 @@
 Package: ArchaeoSRP
 Title: Archaeological Site Record Processor
-Version: 0.0.5
+Version: 1.0.1
 Authors@R: 
   c(person(given = "Sean",
            family = "Bergin",
@@ -23,4 +23,4 @@ Imports:
 License: The GNU General Public License v3.0
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.3
