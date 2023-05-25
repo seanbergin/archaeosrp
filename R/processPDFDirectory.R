@@ -11,10 +11,10 @@
 
 processPDFDirectory <- function(pdf_dir){
 
-  library(tesseract)
-  library(magick)
-  library(magrittr)
-  library(pdftools)
+  #library(tesseract)
+  #library(magick)
+  #library(magrittr)
+  #library(pdftools)
   library(dplyr)
 
   my_dir=pdf_dir
