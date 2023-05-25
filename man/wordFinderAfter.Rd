@@ -10,6 +10,8 @@ wordFinderAfter(stringList, word2find, number.after)
 \item{stringList}{all of the page as a string list}
 
 \item{word2find}{the word you are searching for}
+
+\item{number.after}{the location of the word after the one identified in word2find that is being recorded}
 }
 \description{
 This function allows you to find the word or value that comes multiple places after a word

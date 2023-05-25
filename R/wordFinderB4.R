@@ -3,6 +3,7 @@
 #' This function allows you to find the word or value that comes before a word
 #' @param word2find  the word you are searching for
 #' @param stringList  all of the page as a string list
+#' @param number.before the number of occurences of a string before
 #' @keywords find
 #' @export
 #' @examples

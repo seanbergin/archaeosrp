@@ -3,6 +3,7 @@
 #' This function allows you to find the word or value that comes multiple places after a word
 #' @param word2find  the word you are searching for
 #' @param stringList  all of the page as a string list
+#' @param number.after the location of the word after the one identified in word2find that is being recorded
 #' @keywords find
 #' @export
 #' @examples

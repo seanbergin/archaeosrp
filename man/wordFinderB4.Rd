@@ -10,6 +10,8 @@ wordFinderB4(stringList, word2find, number.before)
 \item{stringList}{all of the page as a string list}
 
 \item{word2find}{the word you are searching for}
+
+\item{number.before}{the number of occurences of a string before}
 }
 \description{
 This function allows you to find the word or value that comes before a word

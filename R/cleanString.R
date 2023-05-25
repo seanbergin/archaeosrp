@@ -1,15 +1,15 @@
 #' Text processing to allow better identifcation of words
 #'
 #' This function allows you to take the giant strongs ID'd with OCR and clean the text
-#' @param siteString the location path of the pdf
+#' @param stringtoclean the location path of the pdf
 #' @keywords text
 #' @export
 #' @examples
 #' cleanString()
 
-cleanString <- function(string){
+cleanString <- function(stringtoclean){
   # Lowercase
-  temp <- tolower(string)
+  temp <- tolower(stringtoclean)
   # Remove everything that is not a number or letter (may want to keep more
   # stuff in your actual analyses).
   # Shrink down to just one white space
