@@ -10,13 +10,6 @@
 
 
 processPDFDirectory <- function(pdf_dir){
-
-  #library(tesseract)
-  #library(magick)
-  #library(magrittr)
-  #library(pdftools)
-  #library(dplyr)
-
   my_dir=pdf_dir
   all_files = ArchaeoSRP::pdfGrabber(my_dir)
   list_size = length(all_files)
