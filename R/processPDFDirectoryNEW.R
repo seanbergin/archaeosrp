@@ -5,11 +5,11 @@
 #' @keywords pdf
 #' @export
 #' @examples
-#' processPDFDirectory2()
+#' processPDFDirectoryNEW()
 
 
 
-processPDFDirectory2 <- function(pdf_dir){
+processPDFDirectoryNEW <- function(pdf_dir){
 
   library(tesseract)
   library(magick)
