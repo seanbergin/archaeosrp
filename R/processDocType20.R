@@ -10,11 +10,17 @@
 
 processDocType20 <- function(df,stringList){
 
-  df$Zone.UTM <- ArchaeoSRP:::phraseFinder(stringList, "zone", "easting")
-  df$E.UTM <- ArchaeoSRP:::phraseFinder(stringList, "easting", "northing")
-  df$N.UTM <- ArchaeoSRP:::wordFinder(stringList, "northing")
-  df$Lat <- ArchaeoSRP:::phraseFinder(stringList, "latitude:", "longitude:")
-  df$Long <- ArchaeoSRP:::phraseFinder(stringList, "longitude:", "elevation")
+  df$Zone.UTM <- phraseFinder(stringList, "zone", "easting")
+  df$E.UTM <- phraseFinder(stringList, "easting", "northing")
+  df$N.UTM <- wordFinder(stringList, "northing")
+  df$Lat <- phraseFinder(stringList, "latitude:", "longitude:")
+  df$Long <- phraseFinder(stringList, "longitude:", "elevation")
+
+  # df$Zone.UTM <- ArchaeoSRP:::phraseFinder(stringList, "zone", "easting")
+  # df$E.UTM <- ArchaeoSRP:::phraseFinder(stringList, "easting", "northing")
+  # df$N.UTM <- ArchaeoSRP:::wordFinder(stringList, "northing")
+  # df$Lat <- ArchaeoSRP:::phraseFinder(stringList, "latitude:", "longitude:")
+  # df$Long <- ArchaeoSRP:::phraseFinder(stringList, "longitude:", "elevation")
 
 
 

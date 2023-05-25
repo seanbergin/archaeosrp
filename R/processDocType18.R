@@ -15,8 +15,6 @@ processDocType18 <- function(df,stringList){
 
   df$E.UTM <- ArchaeoSRP:::phraseFinder(stringList, "easting", "northing")
   df$N.UTM <- ArchaeoSRP:::phraseFinder(stringList, "northing", "gps’d")
-  # df$Lat <- srp:::wordFinder(stringList, "latitude:")
-  # df$Long <- srp:::wordFinder(stringList, "longitude:")
   df$Date <- ArchaeoSRP:::phraseFinder(stringList, "use", "how")
   df$OccupationDensity <- phraseFinder(stringList,"dimensions:", "acres:")
 

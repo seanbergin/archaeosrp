@@ -11,8 +11,8 @@
 processDocType1 <- function(df,stringList){
 
 
-  df$Date = ArchaeoSRP:::wordFinder(stringList=stringList, "known)")
-
+  #df$Date = ArchaeoSRP:::wordFinder(stringList=stringList, "known)")
+  df$Date = wordFinder(stringList=stringList, "known)")
   #if (df$Date == NULL){ df$ScanSuccess = FALSE}
   #stopped here because of problems reading lat/long
 
