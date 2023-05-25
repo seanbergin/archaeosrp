@@ -15,7 +15,7 @@ processPDFDirectory <- function(pdf_dir){
   #library(magick)
   #library(magrittr)
   #library(pdftools)
-  library(dplyr)
+  #library(dplyr)
 
   my_dir=pdf_dir
   all_files = ArchaeoSRP::pdfGrabber(my_dir)
