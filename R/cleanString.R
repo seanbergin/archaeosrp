@@ -12,7 +12,6 @@ cleanString <- function(string){
   temp <- tolower(string)
   # Remove everything that is not a number or letter (may want to keep more
   # stuff in your actual analyses).
-  #temp <- stringr::str_replace_all(temp,"[^a-zA-Z\\s]", " ")
   # Shrink down to just one white space
   temp <- stringr::str_replace_all(temp,"[\\s]+", " ")
   # Split it

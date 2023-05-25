@@ -11,16 +11,16 @@
 processDocType16 <- function(df,stringList){
 
 
-  df$Zone.UTM <- ArchaeoSRP:::wordFinder(stringList, "zone")
-  df$E.UTM <- ArchaeoSRP:::wordFinder(stringList, "easting")
-  df$N.UTM <- ArchaeoSRP:::wordFinder(stringList, "northing")
-  df$Lat <- ArchaeoSRP:::wordFinder(stringList, "lat.")
-  df$Long <- ArchaeoSRP:::wordFinder(stringList, "long.")
-  df$UseInfo <- ArchaeoSRP:::wordFinder(stringList, "function/use")
+  df$Zone.UTM <- wordFinder(stringList, "zone")
+  df$E.UTM <- wordFinder(stringList, "easting")
+  df$N.UTM <- wordFinder(stringList, "northing")
+  df$Lat <- wordFinder(stringList, "lat.")
+  df$Long <- wordFinder(stringList, "long.")
+  df$UseInfo <- wordFinder(stringList, "function/use")
 
-  df$OccupationDensity <- ArchaeoSRP:::wordFinder(stringList,"size")
+  df$OccupationDensity <- wordFinder(stringList,"size")
 
-  df$Date <- ArchaeoSRP:::wordFinder(stringList, "use")
+  df$Date <- wordFinder(stringList, "use")
 
 
   #Check for  7's being misinterpreted as /

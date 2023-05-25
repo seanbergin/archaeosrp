@@ -10,16 +10,15 @@
 
 processDocType7 <- function(df,stringList){
 
-  df$Zone.UTM <- ArchaeoSRP:::phraseFinder(stringList, "zone:", "easting:")
+  df$Zone.UTM <- phraseFinder(stringList, "zone:", "easting:")
   if (identical(df$Zone.UTM,"jo")){
     df$Zone.UTM <- 10
     }
 
-  df$E.UTM <- ArchaeoSRP:::phraseFinder(stringList, "easting:", "northing:")
-  df$N.UTM <- ArchaeoSRP:::phraseFinder(stringList, "northing:", "usgs")
-  #df$UseInfo <- srp:::phraseFinder(stringList,"description:","isolate")
-  df$OccupationDensity <- ArchaeoSRP:::phraseFinder(stringList,"dimensions:","acres:")
-  df$Date <- ArchaeoSRP:::phraseFinderRemover(stringList, "use:", "determined:", 2)
+  df$E.UTM <- phraseFinder(stringList, "easting:", "northing:")
+  df$N.UTM <- phraseFinder(stringList, "northing:", "usgs")
+  df$OccupationDensity <- phraseFinder(stringList,"dimensions:","acres:")
+  df$Date <- phraseFinderRemover(stringList, "use:", "determined:", 2)
 
   return(df)
 }

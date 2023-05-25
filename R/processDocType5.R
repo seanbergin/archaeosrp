@@ -10,17 +10,17 @@
 
 processDocType5 <- function(df,stringList){
 
-  df$Zone.UTM <- ArchaeoSRP:::phraseFinder(stringList, "zone", "easting")
-  df$E.UTM <- ArchaeoSRP:::phraseFinder(stringList, "easting", "northing")
-  df$N.UTM <- ArchaeoSRP:::wordFinder(stringList, "northing")
-  df$Lat <- ArchaeoSRP:::phraseFinder(stringList, "latitude:", "longitude:")
-  df$Long <- ArchaeoSRP:::phraseFinder(stringList, "longitude:", "elevation")
-  df$UseInfo <- ArchaeoSRP:::phraseFinderRemover(stringList,"type:","different", 3)
+  df$Zone.UTM <- phraseFinder(stringList, "zone", "easting")
+  df$E.UTM <- phraseFinder(stringList, "easting", "northing")
+  df$N.UTM <- wordFinder(stringList, "northing")
+  df$Lat <- phraseFinder(stringList, "latitude:", "longitude:")
+  df$Long <- phraseFinder(stringList, "longitude:", "elevation")
+  df$UseInfo <- phraseFinderRemover(stringList,"type:","different", 3)
   # Since there's no other simple information reocrded about the site, I am jsut keeping the whole site description text here
-  df$OccupationDensity <- ArchaeoSRP:::phraseFinderRemover(stringList,"narrative","recorders", 1)
+  df$OccupationDensity <- phraseFinderRemover(stringList,"narrative","recorders", 1)
 
   if(is.na( df$Zone.UTM)){
-    df$Zone.UTM <- ArchaeoSRP:::wordFinderB4(stringList,"easting",1)
+    df$Zone.UTM <- wordFinderB4(stringList,"easting",1)
   }
 
 

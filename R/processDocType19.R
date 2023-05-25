@@ -10,15 +10,15 @@
 
 processDocType19 <- function(df,stringList){
 
-  df$Zone.UTM <- ArchaeoSRP:::phraseFinder(stringList, "zone", "easting:")
-  df$UseInfo <- ArchaeoSRP:::phraseFinderAdvanced(stringList,"type:", "dimensions:","narrative")
+  df$Zone.UTM <- phraseFinder(stringList, "zone", "easting:")
+  df$UseInfo <- phraseFinderAdvanced(stringList,"type:", "dimensions:","narrative")
 
-  df$E.UTM <- ArchaeoSRP:::wordFinder(stringList, "easting:")
-  df$N.UTM <- ArchaeoSRP:::wordFinder(stringList, "northing:")
-  df$Lat <- ArchaeoSRP:::wordFinder(stringList, "latitude:")
-  df$Long <- ArchaeoSRP:::wordFinder(stringList, "longitude:")
-  df$Date <- ArchaeoSRP:::phraseFinderAdvanced(stringList, "component:", "archaeological", "permanence:")
-  df$OccupationDensity <- ArchaeoSRP:::phraseFinderAdvanced(stringList,"dimensions:","vegetation:", "description")
+  df$E.UTM <- wordFinder(stringList, "easting:")
+  df$N.UTM <- wordFinder(stringList, "northing:")
+  df$Lat <- wordFinder(stringList, "latitude:")
+  df$Long <- wordFinder(stringList, "longitude:")
+  df$Date <- phraseFinderAdvanced(stringList, "component:", "archaeological", "permanence:")
+  df$OccupationDensity <- phraseFinderAdvanced(stringList,"dimensions:","vegetation:", "description")
 
 
   return(df)

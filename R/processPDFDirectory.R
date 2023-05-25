@@ -11,22 +11,22 @@
 
 processPDFDirectory <- function(pdf_dir){
   my_dir=pdf_dir
-  all_files = ArchaeoSRP::pdfGrabber(my_dir)
+  all_files = pdfGrabber(my_dir)
   list_size = length(all_files)
-  df.all.sites = ArchaeoSRP::dataFrameDefault()
+  df.all.sites = dataFrameDefault()
 
   for(i in 1:list_size[1]){
 
     # Render pdf to png image
     img_file <- pdftools::pdf_convert(all_files[i], format = 'tiff', pages = NULL, dpi = 1200)
     #Use OCR on each page
-    fullString = ArchaeoSRP::ocr2string(img_file)
+    fullString = ocr2string(img_file)
     #Identify which document types are present
-    doctypes = ArchaeoSRP::docTypeFinder(fullString)
+    doctypes = docTypeFinder(fullString)
     #Split the string into a giant vector
-    stringSplit = ArchaeoSRP::cleanString(fullString)
-    df = ArchaeoSRP::dataFrameDefault()
-    df[1,1] = ArchaeoSRP::getsiteID(all_files[i])
+    stringSplit = cleanString(fullString)
+    df = dataFrameDefault()
+    df[1,1] = getsiteID(all_files[i])
 
     #Make sure the document type has been identified
     if(length(doctypes) == 0){
@@ -41,25 +41,25 @@ processPDFDirectory <- function(pdf_dir){
       totalTypes = length(doctypes)
       #Determine which document types to process and record the info in a dataframe
       for( j in 1:totalTypes[1]){
-        if( doctypes [j] == 1){df = ArchaeoSRP::processDocType1(df, stringSplit)}
-        if( doctypes [j] == 2){df = ArchaeoSRP::processDocType2(df, stringSplit)}
-        if( doctypes [j] == 3){df = ArchaeoSRP::processDocType3(df, stringSplit)}
-        if( doctypes [j] == 4){df = ArchaeoSRP::processDocType4(df, stringSplit)}
-        if( doctypes [j] == 5){df = ArchaeoSRP::processDocType5(df, stringSplit)}
-        if( doctypes [j] == 6){df = ArchaeoSRP::processDocType6(df, stringSplit)}
-        if( doctypes [j] == 7){df = ArchaeoSRP::processDocType7(df, stringSplit)}
-        if( doctypes [j] == 8){df = ArchaeoSRP::processDocType8(df, stringSplit)}
-        if( doctypes [j] == 9){df = ArchaeoSRP::processDocType9(df, stringSplit)}
-        if( doctypes [j] == 10){df = ArchaeoSRP::processDocType10(df, stringSplit)}
-        if( doctypes [j] == 11){df = ArchaeoSRP::processDocType11(df, stringSplit)}
-        if( doctypes [j] == 12){df = ArchaeoSRP::processDocType12(df, stringSplit)}
-        if( doctypes [j] == 13){df = ArchaeoSRP::processDocType13(df, stringSplit)}
-        if( doctypes [j] == 14){df = ArchaeoSRP::processDocType14(df, stringSplit)}
-        if( doctypes [j] == 15){df = ArchaeoSRP::processDocType15(df, stringSplit)}
-        if( doctypes [j] == 17){df = ArchaeoSRP::processDocType17(df, stringSplit)}
-        if( doctypes [j] == 18){df = ArchaeoSRP::processDocType18(df, stringSplit)}
-        if( doctypes [j] == 19){df = ArchaeoSRP::processDocType19(df, stringSplit)}
-        if( doctypes [j] == 20){df = ArchaeoSRP::processDocType20(df, stringSplit)}
+        if( doctypes [j] == 1){df = processDocType1(df, stringSplit)}
+        if( doctypes [j] == 2){df = processDocType2(df, stringSplit)}
+        if( doctypes [j] == 3){df = processDocType3(df, stringSplit)}
+        if( doctypes [j] == 4){df = processDocType4(df, stringSplit)}
+        if( doctypes [j] == 5){df = processDocType5(df, stringSplit)}
+        if( doctypes [j] == 6){df = processDocType6(df, stringSplit)}
+        if( doctypes [j] == 7){df = processDocType7(df, stringSplit)}
+        if( doctypes [j] == 8){df = processDocType8(df, stringSplit)}
+        if( doctypes [j] == 9){df = processDocType9(df, stringSplit)}
+        if( doctypes [j] == 10){df = processDocType10(df, stringSplit)}
+        if( doctypes [j] == 11){df = processDocType11(df, stringSplit)}
+        if( doctypes [j] == 12){df = processDocType12(df, stringSplit)}
+        if( doctypes [j] == 13){df = processDocType13(df, stringSplit)}
+        if( doctypes [j] == 14){df = processDocType14(df, stringSplit)}
+        if( doctypes [j] == 15){df = processDocType15(df, stringSplit)}
+        if( doctypes [j] == 17){df = processDocType17(df, stringSplit)}
+        if( doctypes [j] == 18){df = processDocType18(df, stringSplit)}
+        if( doctypes [j] == 19){df = processDocType19(df, stringSplit)}
+        if( doctypes [j] == 20){df = processDocType20(df, stringSplit)}
 
       }
     }

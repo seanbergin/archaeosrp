@@ -10,18 +10,17 @@
 
 processDocType15 <- function(df,stringList){
 
-  df$Zone.UTM <- ArchaeoSRP:::wordFinder(stringList, "zone")
-  df$UseInfo <- ArchaeoSRP:::phraseFinderAdvanced(stringList,"type:", "phase", "physical" )
+  df$Zone.UTM <- wordFinder(stringList, "zone")
+  df$UseInfo <- phraseFinderAdvanced(stringList,"type:", "phase", "physical" )
 
-  df$E.UTM <- ArchaeoSRP:::phraseFinder(stringList, "easting", "northing")
-  df$N.UTM <- ArchaeoSRP:::phraseFinder(stringList, "northing", "*usgs")
-  # df$Lat <- srp:::wordFinder(stringList, "latitude:")
-  # df$Long <- srp:::wordFinder(stringList, "longitude:")
-  df$Date <- ArchaeoSRP:::phraseFinderAdvanced(stringList,"date:","basis", "physical")
+  df$E.UTM <- phraseFinder(stringList, "easting", "northing")
+  df$N.UTM <- phraseFinder(stringList, "northing", "*usgs")
+
+  df$Date <- phraseFinderAdvanced(stringList,"date:","basis", "physical")
   if (is.na(df$Date)){
-    df$Date <- ArchaeoSRP:::phraseFinder(stringList,"historic/prehistoric:","site")
+    df$Date <- phraseFinder(stringList,"historic/prehistoric:","site")
   }
-  df$OccupationDensity <- ArchaeoSRP:::phraseFinderAdvanced(stringList,"dimensions:","features", "physical")
+  df$OccupationDensity <- phraseFinderAdvanced(stringList,"dimensions:","features", "physical")
 
 
   return(df)

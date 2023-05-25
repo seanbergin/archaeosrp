@@ -10,11 +10,11 @@
 
 processDocType17 <- function(df,stringList){
 
-  df$Zone.UTM <- ArchaeoSRP:::phraseFinder(stringList, "zone", "easting")
-  df$UseInfo <- ArchaeoSRP:::phraseFinder(stringList,"map/drawings:", "isolate")
+  df$Zone.UTM <- phraseFinder(stringList, "zone", "easting")
+  df$UseInfo <- phraseFinder(stringList,"map/drawings:", "isolate")
 
-  df$E.UTM <- ArchaeoSRP:::phraseFinder(stringList, "easting", "northing")
-  df$N.UTM <- ArchaeoSRP:::phraseFinder(stringList, "northing", "usgs")
+  df$E.UTM <- phraseFinder(stringList, "easting", "northing")
+  df$N.UTM <- phraseFinder(stringList, "northing", "usgs")
   df$OccupationDensity <- "isolate"
 
 

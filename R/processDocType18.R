@@ -10,25 +10,25 @@
 
 processDocType18 <- function(df,stringList){
 
-  df$Zone.UTM <- ArchaeoSRP:::phraseFinder(stringList, "zone", "easting")
-  df$UseInfo <- ArchaeoSRP:::phraseFinder(stringList,"type/function/use:", "how")
+  df$Zone.UTM <- phraseFinder(stringList, "zone", "easting")
+  df$UseInfo <- phraseFinder(stringList,"type/function/use:", "how")
 
-  df$E.UTM <- ArchaeoSRP:::phraseFinder(stringList, "easting", "northing")
-  df$N.UTM <- ArchaeoSRP:::phraseFinder(stringList, "northing", "gps’d")
-  df$Date <- ArchaeoSRP:::phraseFinder(stringList, "use", "how")
+  df$E.UTM <- phraseFinder(stringList, "easting", "northing")
+  df$N.UTM <- phraseFinder(stringList, "northing", "gps’d")
+  df$Date <- phraseFinder(stringList, "use", "how")
   df$OccupationDensity <- phraseFinder(stringList,"dimensions:", "acres:")
 
   if(is.na( df$E.UTM)){
-    df$E.UTM <- ArchaeoSRP:::phraseFinder(stringList,"eastng","northing")
+    df$E.UTM <- phraseFinder(stringList,"eastng","northing")
   }
   if(is.na( df$Zone.UTM)){
-    df$Zone.UTM <- ArchaeoSRP:::phraseFinder(stringList, "zone", "eastng")
+    df$Zone.UTM <- phraseFinder(stringList, "zone", "eastng")
   }
   if(is.na( df$E.UTM)){
-    df$E.UTM <- ArchaeoSRP:::phraseFinder(stringList,"eastng","northmg")
+    df$E.UTM <- phraseFinder(stringList,"eastng","northmg")
   }
   if(is.na( df$N.UTM)){
-    df$N.UTM <- ArchaeoSRP:::phraseFinder(stringList,"northmg","gps’d")
+    df$N.UTM <- phraseFinder(stringList,"northmg","gps’d")
   }
 
 

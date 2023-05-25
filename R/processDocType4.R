@@ -10,29 +10,29 @@
 
 processDocType4 <- function(df,stringList){
 
-  df$Zone.UTM <- ArchaeoSRP:::phraseFinder(stringList, "zone", "easting:")
-  df$E.UTM <- ArchaeoSRP:::phraseFinder(stringList, "easting:", "northing:")
-  df$N.UTM <- ArchaeoSRP:::phraseFinder(stringList, "northing:", "latitude:")
-  df$Lat <- ArchaeoSRP:::phraseFinder(stringList, "latitude:", "longitude:")
-  df$Long <- ArchaeoSRP:::phraseFinder(stringList, "longitude:", "elevation")
-  df$UseInfo <- ArchaeoSRP:::phraseFinder(stringList,"type:","dimensions,")
-  df$OccupationDensity <- ArchaeoSRP:::phraseFinder(stringList,"dimensions,","vegetation:")
-  df$Date <- ArchaeoSRP:::phraseFinder(stringList,"*dates:","*dating")
+  df$Zone.UTM <- phraseFinder(stringList, "zone", "easting:")
+  df$E.UTM <- phraseFinder(stringList, "easting:", "northing:")
+  df$N.UTM <- phraseFinder(stringList, "northing:", "latitude:")
+  df$Lat <- phraseFinder(stringList, "latitude:", "longitude:")
+  df$Long <- phraseFinder(stringList, "longitude:", "elevation")
+  df$UseInfo <- phraseFinder(stringList,"type:","dimensions,")
+  df$OccupationDensity <- phraseFinder(stringList,"dimensions,","vegetation:")
+  df$Date <- phraseFinder(stringList,"*dates:","*dating")
 
   if(is.na(df$Zone.UTM)){
-    df$Zone.UTM <- ArchaeoSRP:::phraseFinder(stringList, "zone", "easting")
+    df$Zone.UTM <- phraseFinder(stringList, "zone", "easting")
   }
   if(is.na(df$E.UTM)){
-    df$E.UTM <- ArchaeoSRP:::phraseFinder(stringList, "easting", "northing")
+    df$E.UTM <- phraseFinder(stringList, "easting", "northing")
   }
   if(is.na(df$N.UTM)){
-    df$N.UTM <- ArchaeoSRP:::wordFinder(stringList, "northing")
+    df$N.UTM <- wordFinder(stringList, "northing")
   }
   if(is.na( df$Zone.UTM)){
-    df$Zone.UTM <- ArchaeoSRP:::wordFinderB4(stringList,"easting:",1)
+    df$Zone.UTM <- wordFinderB4(stringList,"easting:",1)
   }
   if(is.na( df$Zone.UTM)){
-    df$Zone.UTM <- ArchaeoSRP:::wordFinderB4(stringList,"easting",1)
+    df$Zone.UTM <- wordFinderB4(stringList,"easting",1)
   }
 
   # if (df$UseInfo == NULL || df$Date == NULL || df$OccupationDensity == NULL)

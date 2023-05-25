@@ -10,15 +10,13 @@
 
 processDocType12 <- function(df,stringList){
 
-  df$Zone.UTM <- ArchaeoSRP:::wordFinder(stringList, "zone:")
-  df$UseInfo = ArchaeoSRP:::wordFinder(stringList, "classification:")
+  df$Zone.UTM <- wordFinder(stringList, "zone:")
+  df$UseInfo = wordFinder(stringList, "classification:")
 
-  df$E.UTM <- ArchaeoSRP:::wordFinder(stringList, "easting:")
-  df$N.UTM <- ArchaeoSRP:::wordFinder(stringList, "northing:")
-  # df$Lat <- srp:::wordFinder(stringList, "latitude:")
-  # df$Long <- srp:::wordFinder(stringList, "longitude:")
-  df$Date <- ArchaeoSRP:::wordFinder(stringList, "construction:")
-  #df$OccupationDensity <- srp:::phraseFinder(stringList,"dimensions:","acres:")
+  df$E.UTM <- wordFinder(stringList, "easting:")
+  df$N.UTM <- wordFinder(stringList, "northing:")
+  df$Date <- wordFinder(stringList, "construction:")
+
 
   return(df)
 }

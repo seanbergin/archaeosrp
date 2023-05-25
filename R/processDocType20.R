@@ -16,47 +16,41 @@ processDocType20 <- function(df,stringList){
   df$Lat <- phraseFinder(stringList, "latitude:", "longitude:")
   df$Long <- phraseFinder(stringList, "longitude:", "elevation")
 
-  # df$Zone.UTM <- ArchaeoSRP:::phraseFinder(stringList, "zone", "easting")
-  # df$E.UTM <- ArchaeoSRP:::phraseFinder(stringList, "easting", "northing")
-  # df$N.UTM <- ArchaeoSRP:::wordFinder(stringList, "northing")
-  # df$Lat <- ArchaeoSRP:::phraseFinder(stringList, "latitude:", "longitude:")
-  # df$Long <- ArchaeoSRP:::phraseFinder(stringList, "longitude:", "elevation")
-
 
 
   if(is.na( df$Lat)){
-    df$Lat <- ArchaeoSRP:::wordFinderAfter(stringList,"latitude:",0)
+    df$Lat <- wordFinderAfter(stringList,"latitude:",0)
   }
   if(is.na( df$Long)){
-    df$Long <- ArchaeoSRP:::wordFinderB4(stringList,"elevation",1)
+    df$Long <- wordFinderB4(stringList,"elevation",1)
     df$Long <- gsub(".*\\:", "", df$Long)
   }
 
 
-  df$UseInfo <- ArchaeoSRP:::phraseFinder(stringList,"19):","site")
+  df$UseInfo <- phraseFinder(stringList,"19):","site")
 
-  df$OccupationDensity <- ArchaeoSRP:::phraseFinder(stringList,"dimensions):","*method")
+  df$OccupationDensity <- phraseFinder(stringList,"dimensions):","*method")
   if(is.na( df$OccupationDensity)){
-    df$OccupationDensity <- ArchaeoSRP:::phraseFinder(stringList,"dimensions):","method")
+    df$OccupationDensity <- phraseFinder(stringList,"dimensions):","method")
   }
 
-  df$OtherInfo<- ArchaeoSRP:::phraseFinder(stringList,"Details):","*Method")
+  df$OtherInfo<- phraseFinder(stringList,"Details):","*Method")
   if(is.na( df$OtherInfo)){
-    df$OtherInfo <- ArchaeoSRP:::phraseFinder(stringList,"Details):","Method")
+    df$OtherInfo <- phraseFinder(stringList,"Details):","Method")
   }
 
 
-  df$Date <- ArchaeoSRP:::wordFinder(stringList, "*Component:")
+  df$Date <- wordFinder(stringList, "*Component:")
   if(is.na( df$Date)){
-    df$Date <- ArchaeoSRP:::wordFinder(stringList, "Component:")
+    df$Date <- wordFinder(stringList, "Component:")
   }
   if(is.na( df$Date)){
-    df$Date <- ArchaeoSRP:::wordFinderB4(stringList, "approximation):", 5)
+    df$Date <- wordFinderB4(stringList, "approximation):", 5)
   }
 
-  df$BP <- ArchaeoSRP:::wordFinderAfter(stringList,"approximation):", 0)
+  df$BP <- wordFinderAfter(stringList,"approximation):", 0)
   if(is.na( df$BP)){
-    df$BP <- ArchaeoSRP:::phraseFinder(stringList,"approximation):","dating")
+    df$BP <- phraseFinder(stringList,"approximation):","dating")
   }
 
 
