@@ -13,11 +13,10 @@ Authors@R:
            comment = c(ORCID = "0000-0003-3548-2241")))
 Description: This package is intended to aid in the processing of archaeological site records. In the initial stage of this project site records were scanned and saved as pdfs. The purpose of this package is to use OCR on these site records and then parse, identify and save useful information.
 Depends: 
-    R (>= 4.1.2)
+    R (>= 4.1.0)
 Imports:
     tesseract (>= 5.0.0),
     magick (>= 2.7.3),
-    magrittr (>= 2.0.0),
     pdftools (>= 3.1.1),
     stringr(>= 1.5.0)
 License: GPL-3
