@@ -16,6 +16,10 @@ To install this package in R you must have the most recent and updated copy of t
 ```shell
 library (devtools)
 install_github("seanbergin/archaeosrp")
+
+or 
+
+remotes::install_github("seanbergin/archaeosrp")
 ```
 
 # How To Use
