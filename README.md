@@ -1,7 +1,7 @@
 # ArchaeoSRP
 Archaeological Site Report Processor
 
-The purpose of this package is to read PDFs with archaeological site report information and return the information in the forms as a dataframe. This information may include things like, site size, location information, periods of use, or types of use. 
+ArchaeoSRP is an R package whose purpose is to read PDFs with archaeological site report information and return the information in the forms as a dataframe. This information may include things like, site size, location information, periods of use, or types of use. 
 
 The package was developed to read archaeological site reports from the Wenatchee National Forest. SRP uses the OCR engine from Tesseract to transform the PDFs into text. The text is then searched for keywords to locate information which is then saved to the dataframe. 
 
@@ -11,7 +11,8 @@ The USDA Forest Service has been recording and documenting arhcaeological sites 
 
 # How To Install
 
-To install this package in R you must have the most recent and updated copy of either the remotes packages. You must also load this package first. Then, you can install the package directly from github. To install the remotes package:
+In order to use this package you must have the R statistical language installed. The most recent copy of R can be downloaded from  https://cran.r-project.org/
+To install this package in R you should have the most recent and updated copy of the remotes packages. You must also load this package first. Then, you can install the package directly from github. To install the remotes package you can use the following command:
 
 
 ```shell
