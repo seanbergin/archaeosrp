@@ -11,14 +11,17 @@ The USDA Forest Service has been recording and documenting arhcaeological sites 
 
 # How To Install
 
-To install this package in R you must have the most recent and updated copy of the devtools package. You must also load this package first. Then, you can install the package directly from github. Then type the following command into R:
+To install this package in R you must have the most recent and updated copy of either the remotes packages. You must also load this package first. Then, you can install the package directly from github. To install the remotes package:
+
 
 ```shell
-library (devtools)
-install_github("seanbergin/archaeosrp")
+install.packages("remotes")
+```
 
-or 
+Once it is installed you can use this package to install the ArchaeoSRP package from Github:
 
+```shell
+library(remotes)
 remotes::install_github("seanbergin/archaeosrp")
 ```
 
