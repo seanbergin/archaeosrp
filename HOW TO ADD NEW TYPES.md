@@ -21,9 +21,9 @@ Frist the new document type must be added to docTypeFinder.R The document type i
 Next, you must modify processPDFDirectory.R   Here, the individual document types are processed based on the new type number. New types should be added by including code similar to this but with your document type number instead of 20:
 
 ```shell
-if( doctypes [j] == 20){df = ArchaeoSRP:::processDocType20(df, stringSplit)}
+if( doctypes [j] == 20){df = processDocType20(df, stringSplit)}
 
-if( doctypes [j] == ##){df = ArchaeoSRP:::processDocType##(df, stringSplit)}
+if( doctypes [j] == ##){df = processDocType##(df, stringSplit)}
 
 ```
 #Step 3
@@ -33,9 +33,9 @@ Finally, one must add the r script that will record information from your new ty
 ```shell
 processDocType15 <- function(df,stringList){
 
-  df$Zone.UTM <- ArchaeoSRP:::wordFinder(stringList, "zone")
-  df$E.UTM <- ArchaeoSRP:::phraseFinder(stringList, "easting", "northing")
-  df$N.UTM <- ArchaeoSRP:::phraseFinder(stringList, "northing", "*usgs")
+  df$Zone.UTM <- wordFinder(stringList, "zone")
+  df$E.UTM <- phraseFinder(stringList, "easting", "northing")
+  df$N.UTM <- phraseFinder(stringList, "northing", "*usgs")
   .....
 
   return(df)
