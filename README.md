@@ -45,5 +45,5 @@ pdflocation <- system.file("extdata", "SamplePDFs", package = "ArchaeoSRP", must
 ```
 2. Use ArchaeSRP to scan the documents and extract information.
 ```shell
-siteDF <- ArchaeoSRP::processPDFDirectory(pdflocation)
+siteDF <- processPDFDirectory(pdflocation)
 ```
