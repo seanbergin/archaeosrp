@@ -7,7 +7,7 @@
 #' @examples
 #' getsiteID()
 
-getsiteID <- function (siteString) {
+getsiteID <- function (siteString = "") {
   site.name = strsplit(siteString,"/")
   site.name = unlist(site.name)
   name.size = length(site.name)

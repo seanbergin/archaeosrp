@@ -10,11 +10,11 @@
 #' @examples
 #' phraseFinderRemover()
 
-phraseFinderRemover <- function(stringList, firstword, lastword, words.to.remove){
+phraseFinderRemover <- function(stringList  = "", firstword  = "", lastword  = "", words.to.remove  = 0){
   match1 = (match(firstword,stringList)+1)
   match2 = (match(lastword,stringList)-1)
   match2 = match2 - words.to.remove
-  
+
   if (is.na(match1) || is.na(match2)){
     value = NA
   }else{

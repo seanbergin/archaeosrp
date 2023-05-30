@@ -4,7 +4,7 @@
 \alias{docTypeFinder}
 \title{Identifies the Document Type}
 \usage{
-docTypeFinder(fullString)
+docTypeFinder(fullString = "")
 }
 \arguments{
 \item{fullString}{the entire document}

@@ -10,15 +10,15 @@
 #' @examples
 #' phraseFinderAdvanced()
 
-phraseFinderAdvanced <- function(stringList, firstword, lastword, afterword){
-  
+phraseFinderAdvanced <- function(stringList = "", firstword = "", lastword = "", afterword = ""){
+
   match3 = (match(afterword,stringList))
   if (is.na(match3)){
     value = NA
   }else{
     stringSegment = stringList[match3:length(stringList)]
     match1 = (match(firstword,stringSegment)+1)
-    
+
     if (is.na(match1)){
       value = NA
     }else{
@@ -31,12 +31,12 @@ phraseFinderAdvanced <- function(stringList, firstword, lastword, afterword){
         value = paste(stringSegment[1:match2], sep=" ", collapse=" ")
       }
     }
-    
+
   }
 
   if (identical(value,lastword)){
     value = NA
   }
-  
+
   return(value)
 }

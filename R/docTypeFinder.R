@@ -7,7 +7,7 @@
 #' @examples
 #' docTypeFinder()
 
-docTypeFinder <- function(fullString){
+docTypeFinder <- function(fullString = ""){
 
   value <- NULL
   #check for document 1

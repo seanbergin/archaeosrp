@@ -4,7 +4,7 @@
 \alias{getsiteID}
 \title{returns the filename of each file}
 \usage{
-getsiteID(siteString)
+getsiteID(siteString = "")
 }
 \arguments{
 \item{siteString}{the location path of the pdf}

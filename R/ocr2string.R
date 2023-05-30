@@ -7,9 +7,8 @@
 #' @examples
 #' ocr2string()
 
-ocr2string <- function(pages){
+ocr2string <- function(pages = "/"){
 
-  library(dplyr)
   number_pages <- length(pages)
 
   all_text = ""

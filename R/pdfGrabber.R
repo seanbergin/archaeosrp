@@ -7,7 +7,7 @@
 #' @examples
 #' pdfGrabber()
 
-pdfGrabber <- function(directory){
+pdfGrabber <- function(directory  = ""){
   all_files = list.files(path = directory, all.files = TRUE, full.names = TRUE, pattern = "\\.pdf$")
   return (all_files)
 }

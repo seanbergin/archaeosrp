@@ -9,9 +9,9 @@
 #' @examples
 #' phraseFinder()
 
-phraseFinder <- function(stringList, firstword, lastword){
+phraseFinder <- function(stringList  = "", firstword  = "", lastword  = ""){
   match1 = (match(firstword,stringList)+1)
-  
+
   if (is.na(match1)){
     value = NA
   }else{
@@ -24,10 +24,10 @@ phraseFinder <- function(stringList, firstword, lastword){
       value = paste(stringSegment[1:match2], sep=" ", collapse=" ")
     }
   }
-  
+
   if (identical(value,lastword)){
     value = NA
   }
-  
+
   return(value)
 }

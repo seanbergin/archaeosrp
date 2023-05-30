@@ -4,7 +4,12 @@
 \alias{phraseFinderAdvanced}
 \title{Find the words in between two words}
 \usage{
-phraseFinderAdvanced(stringList, firstword, lastword, afterword)
+phraseFinderAdvanced(
+  stringList = "",
+  firstword = "",
+  lastword = "",
+  afterword = ""
+)
 }
 \arguments{
 \item{stringList}{all of the page as a string list}

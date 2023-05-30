@@ -4,7 +4,7 @@
 \alias{pdfGrabber}
 \title{A PDF Indexer for a given folder location}
 \usage{
-pdfGrabber(directory)
+pdfGrabber(directory = "")
 }
 \arguments{
 \item{directory}{location of all your pdfs.}

@@ -4,10 +4,10 @@
 \alias{cleanString}
 \title{Text processing to allow better identifcation of words}
 \usage{
-cleanString(stringtoclean)
+cleanString(stringtoclean = "")
 }
 \arguments{
-\item{stringtoclean}{the location path of the pdf}
+\item{stringtoclean}{the string taken from the pdf that needs to be cleaned of problematic characters and text}
 }
 \description{
 This function allows you to take the giant strongs ID'd with OCR and clean the text

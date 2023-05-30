@@ -4,7 +4,12 @@
 \alias{phraseFinderRemover}
 \title{Find the words in between two words}
 \usage{
-phraseFinderRemover(stringList, firstword, lastword, words.to.remove)
+phraseFinderRemover(
+  stringList = "",
+  firstword = "",
+  lastword = "",
+  words.to.remove = 0
+)
 }
 \arguments{
 \item{stringList}{all of the page as a string list}
