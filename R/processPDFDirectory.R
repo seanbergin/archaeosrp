@@ -9,12 +9,12 @@
 
 
 
-processPDFDirectory <- function(pdf_dir){
+processPDFDirectory <- function(pdf_dir = ""){
   my_dir=pdf_dir
   all_files = pdfGrabber(my_dir)
   list_size = length(all_files)
   df.all.sites = dataFrameDefault()
-
+if (list_size > 0){
   for(i in 1:list_size[1]){
 
     # Render pdf to png image
@@ -63,7 +63,7 @@ processPDFDirectory <- function(pdf_dir){
 
       }
     }
-
+}
 
     df.all.sites = rbind(df.all.sites,df)
     #Get Rid of the temporary Image files

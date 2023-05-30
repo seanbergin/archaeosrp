@@ -8,7 +8,7 @@
 #' @examples
 #' processDocType1()
 
-processDocType2 <- function(df,stringList){
+processDocType2 <- function(df = NULL, stringList = NULL){
 
   df$UseInfo = phraseFinder(stringList,"instructions)","description")
   df$Date = phraseFinder(stringList,"dates","cultural")

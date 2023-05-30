@@ -8,7 +8,7 @@
 #' @examples
 #' processDocType10()
 
-processDocType10 <- function(df,stringList){
+processDocType10 <- function(df = NULL, stringList = NULL){
 
   df$UseInfo = phraseFinder(stringList,"type*","dimensions:")
   df$Date <- phraseFinder(stringList,"component*","phase")

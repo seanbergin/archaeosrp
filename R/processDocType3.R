@@ -8,7 +8,7 @@
 #' @examples
 #' processDocType3()
 
-processDocType3 <- function(df,stringList){
+processDocType3 <- function(df = NULL, stringList = NULL){
 
 
   df$Date <- phraseFinder(stringList,"possible):","how")

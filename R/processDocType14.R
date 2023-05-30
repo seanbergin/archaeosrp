@@ -8,7 +8,7 @@
 #' @examples
 #' processDocType14()
 
-processDocType14 <- function(df,stringList){
+processDocType14 <- function(df = NULL, stringList = NULL){
 
   df$UseInfo <- phraseFinder(stringList,"use:","current")
 

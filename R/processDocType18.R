@@ -8,7 +8,7 @@
 #' @examples
 #' processDocType18()
 
-processDocType18 <- function(df,stringList){
+processDocType18 <- function(df = NULL, stringList = NULL){
 
   df$Zone.UTM <- phraseFinder(stringList, "zone", "easting")
   df$UseInfo <- phraseFinder(stringList,"type/function/use:", "how")

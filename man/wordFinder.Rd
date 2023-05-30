@@ -4,7 +4,7 @@
 \alias{wordFinder}
 \title{Find the word following another word}
 \usage{
-wordFinder(stringList, word2find)
+wordFinder(stringList = NULL, word2find = NULL)
 }
 \arguments{
 \item{stringList}{all of the page as a string list}

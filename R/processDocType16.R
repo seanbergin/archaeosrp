@@ -8,7 +8,7 @@
 #' @examples
 #' processDocType16()
 
-processDocType16 <- function(df,stringList){
+processDocType16 <- function(df = NULL, stringList = NULL){
 
 
   df$Zone.UTM <- wordFinder(stringList, "zone")

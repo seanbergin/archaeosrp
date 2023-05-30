@@ -4,14 +4,14 @@
 \alias{wordFinderB4}
 \title{Find the word following another word}
 \usage{
-wordFinderB4(stringList, word2find, number.before)
+wordFinderB4(stringList = NULL, word2find = NULL, numberBefore = NULL)
 }
 \arguments{
 \item{stringList}{all of the page as a string list}
 
 \item{word2find}{the word you are searching for}
 
-\item{number.before}{the number of occurences of a string before}
+\item{numberBefore}{the number of occurences of a string before}
 }
 \description{
 This function allows you to find the word or value that comes before a word

@@ -4,7 +4,7 @@
 \alias{processPDFDirectory}
 \title{Process all the PDFs in a given directory}
 \usage{
-processPDFDirectory(pdf_dir)
+processPDFDirectory(pdf_dir = "")
 }
 \arguments{
 \item{pdf_dir}{the directory that has all of the PDFs you wish to process}

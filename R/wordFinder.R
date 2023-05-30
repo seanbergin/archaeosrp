@@ -8,7 +8,7 @@
 #' @examples
 #' wordFinder()
 
-wordFinder <- function(stringList, word2find){
+wordFinder <- function(stringList = NULL, word2find = NULL){
   matches = match(word2find,stringList)
   value = stringList[matches + 1]
   return(value)

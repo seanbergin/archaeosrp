@@ -8,7 +8,7 @@
 #' @examples
 #' processDocType1()
 
-processDocType1 <- function(df,stringList){
+processDocType1 <- function(df = NULL, stringList = NULL){
 
 
   #df$Date = ArchaeoSRP:::wordFinder(stringList=stringList, "known)")

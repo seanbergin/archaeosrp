@@ -4,7 +4,7 @@
 \alias{ocr2string}
 \title{OCR on multiple pages}
 \usage{
-ocr2string(pages = "/")
+ocr2string(pages = NULL)
 }
 \arguments{
 \item{pages}{the images used}

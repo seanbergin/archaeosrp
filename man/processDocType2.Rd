@@ -4,7 +4,7 @@
 \alias{processDocType2}
 \title{Find and store important values for document type 2}
 \usage{
-processDocType2(df, stringList)
+processDocType2(df = NULL, stringList = NULL)
 }
 \arguments{
 \item{df}{the dataframe for this site which is passed to each document type}
