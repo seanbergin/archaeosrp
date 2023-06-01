@@ -9,6 +9,12 @@ The USDA Forest Service has been recording and documenting arhcaeological sites 
 
 <a href="https://zenodo.org/badge/latestdoi/343913660"><img src="https://zenodo.org/badge/343913660.svg" alt="DOI"></a>
 
+This package imports four R packages in order to read archaeological site reports.
+
+
+  Wickham H (2022). _stringr: Simple, Consistent Wrappers for Common String Operations_. R package version 1.5.0,
+  <https://CRAN.R-project.org/package=stringr>.
+
 # How To Install
 
 In order to use this package you must have the R statistical language installed. The most recent copy of R can be downloaded from  https://cran.r-project.org/
