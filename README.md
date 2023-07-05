@@ -25,6 +25,7 @@ Once it is installed you can use this package to install the ArchaeoSRP package 
 ```shell
 library(remotes)
 remotes::install_github("seanbergin/archaeosrp")
+library(ArchaeoSRP)
 ```
 
 # How To Use
