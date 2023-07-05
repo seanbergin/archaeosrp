@@ -1,9 +1,9 @@
 # ArchaeoSRP
-Archaeological Site Report Processor
+Archaeological Site Record Processor
 
-ArchaeoSRP is an R package whose purpose is to read PDFs with archaeological site report information and return the information in the forms as a dataframe. This information may include things like, site size, location information, periods of use, or types of use. 
+ArchaeoSRP is an R package whose purpose is to read digital (PDF) archaeological site records and return information in the forms as a dataframe. This information may include things like, site size, location information, periods of use, or types of use. 
 
-The package was developed to read archaeological site reports from the Wenatchee National Forest. SRP uses the OCR engine from Tesseract to transform the PDFs into text. The text is then searched for keywords to locate information which is then saved to the dataframe. 
+The package was developed to read archaeological site records from the Wenatchee National Forest. SRP uses the OCR engine from Tesseract to transform the PDFs into text. The text is then searched for keywords to locate information which is then saved to the dataframe. 
 
 The USDA Forest Service has been documneting and monitoring archaeological sites for decades. During this time the types of forms used to record information about archaeological sites has changed. To adjust for different types of forms, the package first uses specific keywords and phrases such as the titles on documents to identify a form type. Once the form type has been identified specific keywords are then used to locate and save information. There are 21 different form types. 
 
@@ -57,7 +57,7 @@ Once you have added a new form type we invite you to upload your new site types 
 
 # Dependencies
 
-This package imports four R packages in order to read archaeological site reports:
+This package imports four R packages in order to read archaeological site records:
 
   Ooms J (2023). _magick: Advanced Graphics and Image-Processing in R_. R package version 2.7.4, <https://CRAN.R-project.org/package=magick>.
 
