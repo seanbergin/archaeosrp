@@ -1,4 +1,4 @@
-# How to add new types of archaeological site records
+# How to Add New Types of Archaeological Site Records
 
 The ArchaeoSRP package is designed to record information from scanned copies of archaeological site reports. In order to accomplish this, the program must be able to identify where the information you wish to record is located on a form. For example, the age of a site might be referred to as “age” on one form type, “period” on a second and “date" on a third. In order to record the correct information various types are recorded so that the package can record the correct information. In order to identify a type, something unique about a type must be identified. Often unique types have unique headers. As the use of this tool increases it will be necessary for users to add new document types that were not recorded in our initial analysis.
 
