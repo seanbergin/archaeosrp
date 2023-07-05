@@ -63,7 +63,7 @@ if (list_size > 0){
 
       }
     }
-}
+
 
     df.all.sites = rbind(df.all.sites,df)
     #Get Rid of the temporary Image files
@@ -71,7 +71,7 @@ if (list_size > 0){
     gc( full = TRUE)
     cat("Document", i, "of", list_size,"Complete", sep=" ")
     cat("\n")
-
+   }
   }
 
   return(df.all.sites)
