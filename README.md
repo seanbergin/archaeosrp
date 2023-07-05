@@ -49,9 +49,9 @@ pdflocation <- system.file("extdata", "SamplePDFs", package = "ArchaeoSRP", must
 siteDF <- processPDFDirectory(pdflocation)
 ```
 
-# Extend The Package For Your Research
+# How to Extend The Package For Your Research
 
-This package was developed for a specific use case, but it was designed to be extensible to the needs of other researchers. To extend the package to the site form types of your region or office, one can add additional site form types to the package. Instrictions on how to add a new site form type can be found here: <https://github.com/seanbergin/archaeosrp/blob/main/How_to_Add_New_Types.md>
+This package was developed for a specific use case, but it was designed to be extensible for the needs of other researchers. To extend the package to the site form types of your region or office, one can add additional site form types to the package. Instrictions on how to add a new site form type can be found here: <https://github.com/seanbergin/archaeosrp/blob/main/How_to_Add_New_Types.md>
 
 Once you have added a new form type we invite you to upload your new site types to this package to aid in its usability for future research.
 
