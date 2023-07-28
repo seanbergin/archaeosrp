@@ -28,6 +28,8 @@ remotes::install_github("seanbergin/archaeosrp")
 library(ArchaeoSRP)
 ```
 
+Please note, windows users may also need Rtools to install R packages from GitHub.
+
 # How To Use
 
 The package can be used in two main ways. The main procedure takes a folder location as an input (where PDFs are stored) and outputs data recorded from the form as a dataframe. It is called processPDFDirectory(directory to pdfs).
