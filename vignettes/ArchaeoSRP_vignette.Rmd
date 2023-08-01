@@ -1,0 +1,53 @@
+---
+title: "Operating ArchaeoSRP"
+author: "Sean M. Bergin and Grant Snitker"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Operating ArchaeoSRP}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>")
+  
+  library(magrittr)
+  library(kableExtra)
+
+```
+
+This vignette demonstrates how to utilize the ArchaeoSRP package for creating machine-readable pdfs of site forms and extracting pertinent information about the recorded each archaeological site form for research or management applications. More information on the design, installation, and functionality of [ArchaeoSRP](https://github.com/seanbergin/archaeosrp) can be found in the Readme and supporting documents on GitHub. 
+
+## Load required packages
+```{r install, include = T}
+library(remotes)
+```
+
+## Install ArchaeoSRP from GitHub
+```{r install ArchaeoSRP, include = T, message=FALSE, results = FALSE}
+remotes::install_github("seanbergin/archaeosrp", force = TRUE)
+library(ArchaeoSRP)
+```
+
+## Assign the example PDF location to a variable
+```{r example pdf, include = T}
+pdflocation <- system.file("extdata", "SamplePDFs", package = "ArchaeoSRP", mustWork = TRUE)
+```
+## Use ArchaeSRP to scan the documents and extract information
+```{r scan extract, include = T}
+siteDF <- processPDFDirectory(pdflocation)
+
+```
+## Display results dataframe 
+```{r Display results}
+knitr::kable(siteDF, format = "html", table.attr = "style='width:30%;'") %>%
+  kableExtra::kable_styling()
+kable(siteDF, table.attr = "style='width:40%;'" ) %>% kable_classic(full_width = T, position = "center", )
+
+siteDF %>% kable("html") %>%
+  kable_styling(font_size = 9)
+```
+```

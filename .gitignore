@@ -12,3 +12,5 @@ Example_site_1_1.tiff
 inst/.DS_Store
 inst/extdata/.DS_Store
 .DS_Store
+/doc/
+/Meta/
