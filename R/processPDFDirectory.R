@@ -9,7 +9,7 @@
 
 
 
-processPDFDirectory <- function(pdf_dir = ""){
+processPDFDirectory <- function(pdf_dir = "", agency = "USFS"){
   my_dir=pdf_dir
   all_files = pdfGrabber(my_dir)
   list_size = length(all_files)
@@ -25,7 +25,8 @@ if (list_size > 0){
     doctypes = docTypeFinder(fullString)
     #Split the string into a giant vector
     stringSplit = cleanString(fullString)
-    df = dataFrameDefault()
+    if (agency == "USFS"){df = dataFrameDefault()}
+    if (agency == "Louisiana"){df = dataFrameLouisiana()}
     df[1,1] = getsiteID(all_files[i])
 
     #Make sure the document type has been identified
@@ -40,6 +41,7 @@ if (list_size > 0){
     if (df$ScanSuccess){
       totalTypes = length(doctypes)
       #Determine which document types to process and record the info in a dataframe
+      if (agency == "USFS"){
       for( j in 1:totalTypes[1]){
         if( doctypes [j] == 1){df = processDocType1(df, stringSplit)}
         if( doctypes [j] == 2){df = processDocType2(df, stringSplit)}
@@ -60,7 +62,14 @@ if (list_size > 0){
         if( doctypes [j] == 18){df = processDocType18(df, stringSplit)}
         if( doctypes [j] == 19){df = processDocType19(df, stringSplit)}
         if( doctypes [j] == 20){df = processDocType20(df, stringSplit)}
-
+        if( doctypes [j] == 21){df = processDocType21(df, stringSplit)}
+      }
+        
+        if (agency == "Louisiana"){
+          if( doctypes [j] == "LA-22"){df = processDocTypeLA1(df, stringSplit)}
+          
+        }
+        
       }
     }
 

@@ -184,7 +184,14 @@ docTypeFinder <- function(fullString = ""){
       value <- append(value,21)
     }
   }
-
+  
+  #check for document type 22 (Louisiana State Site Record Update)
+  stringTitle = "state of louisiana site record update form"  
+  presence = grepl(stringTitle,fullString)
+  if(presence){
+    value <- append(value,22)
+  }
+  
   return(value)
 
 }

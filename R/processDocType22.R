@@ -1,16 +1,17 @@
-#' Find and store important values for document type 1
+#' Find and store important values for document type 22
 #'
-#' This function allows you to sort through document type 1 and save relevant information
+#' This function allows you to sort through document type 22 and save relevant information
 #' @param df  the dataframe for this site which is passed to each document type
 #' @param stringList  all of the page as a string list
-#' @keywords type1
+#' @keywords type22
 #' @export
 #' @examples
-#' processDocType1()
+#' processDocType22()
 
 
+# Note that this is a new type addition to read Louisiana State Site Records (type 22: "Update forms")
 
-processDocType1 <- function(df = NULL, stringList = NULL){
+processDocType22 <- function(df = NULL, stringList = NULL){
 
 
   #df$Date = ArchaeoSRP:::wordFinder(stringList=stringList, "known)")
